@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Website Crawler</title>
+</head>
+
+<body>
+    <h1>Website Crawler</h1>
+    <form action="/crawl" method="post">
+        <label for="url">Enter URL:</label>
+        <input type="text" id="url" name="url" required>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <br> {% if captions %}
+    <h2>Captions:</h2>
+    <ul>
+        {% for caption in captions %}
+        <li>{{ caption }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</body>
+
+</html>
